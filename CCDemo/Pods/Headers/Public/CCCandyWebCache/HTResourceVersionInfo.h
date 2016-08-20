@@ -1,0 +1,1 @@
+../../../../../src/VersionChecker/HTResourceVersionInfo.h
