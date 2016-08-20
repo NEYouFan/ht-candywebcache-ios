@@ -180,8 +180,8 @@ config.pullInterval = 10 * 60; //十分钟
 
 ## CandyWebCache客户端SDK对打包方式的要求
 
-* 打包资源包目录路径要跟url能够对应，如http://m.kaola.com/public/r/js/core_57384232.js，资源的存放路径需要是public/r/js/core_57384232.js或者r/js/core_57384232.js
-* 资源缓存不支持带“?”的url，如果有版本号信息需要打到文件名中。对于为了解决缓存问题所采用的后缀形式url，如“http://m.kaola.com/public/r/js/core.js?v=57384232”,需要调整打包方式，采用文件名来区分版本号
+* 打包资源包目录路径要跟url能够对应，如 `http://m.kaola.com/public/r/js/core_57384232.js` ，资源的存放路径需要是 `public/r/js/core_57384232.js` 或者 `r/js/core_57384232.js`。
+* 资源缓存不支持带“?”的url，如果有版本号信息需要打到文件名中。对于为了解决缓存问题所采用的后缀形式url，如 `http://m.kaola.com/public/r/js/core.js?v=57384232` ,需要调整打包方式，采用文件名来区分版本号
 
 ##  系统要求
 
