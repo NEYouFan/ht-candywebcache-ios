@@ -1,0 +1,1 @@
+../../../../../src/HTFileDownloader/HTFileTransferItem.h
