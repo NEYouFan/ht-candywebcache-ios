@@ -14,10 +14,10 @@ CandyWebCache是移动端web资源的本地缓存的解决方案，能够拦截w
 
 ###  一、使用CocoaPods安装CandyWebCache及依赖库
 
-(1) 修改Podfile。CandyWebCache依赖于文件下载库HTFileDownloader和资源解压缩库ZipArchive。
+(1) 修改Podfile。
 
 ```
-pod 'CCCandyWebCache', :path => '../',:inhibit_warnings => true
+pod 'CCCandyWebCache', :git => 'https://github.com/NEYouFan/ht-candywebcache-ios.git',:inhibit_warnings => true
 pod 'ZipArchive', '~>1.3.0'
 ```
 
@@ -34,7 +34,7 @@ pod 'ZipArchive', '~>1.3.0'
 
 ```
 # connection info
-WEBCACHE_SERVER = "10.165.124.46"
+WEBCACHE_SERVER = "127.0.0.1"
 PORT = 8080
 
 # appInfo
@@ -72,7 +72,7 @@ NATIVE_VERSION = "1.0.0"
 
 ```
     CCCandyWebCacheConfig* config = [CCCandyWebCacheConfig new];
-    config.serverAddress = @"10.165.124.46:8080";
+    config.serverAddress = @"127.0.0.1:8080";
     config.appName = @"kaoLa";
     config.appVersion = @"1.0.1";
     config.blackListResourceTypes = @[@"html"];
