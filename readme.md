@@ -84,7 +84,7 @@ NATIVE_VERSION = "1.0.0"
 
 ```
 	CCCandyWebCache* cacheManager = [CCCandyWebCache defaultWebCache].cacheManager;
-	cacheManager.cocurrentDownloadCount = 3;
+	cacheManager.concurrentDownloadCount = 3;
 	cacheManager.memCacheSize = 10 * 1024 * 1024;
 
 ```
