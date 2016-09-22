@@ -570,13 +570,17 @@ static dispatch_queue_t htFileDownloaderBackgroundQueue;
         //注：对于同一url
         //如果同名文件已经存在，则重命名存储：file(1).jpg, file(2).jpg
         if ([[NSFileManager defaultManager] fileExistsAtPath:localFileDestinationPath] == YES) {
-            NSArray<NSString *> * prefixAndPostfixOfFileName = [downloadTask.downloadTaskData.fileName componentsSeparatedByString:@"."];
-            NSString * prefixOfFileName = prefixAndPostfixOfFileName[0];
-            NSString * postOfFileName = prefixAndPostfixOfFileName[1];
+            NSString * fileExtension = [downloadTask.downloadTaskData.fileName pathExtension];
+            NSString * fileNameWithoutExt = [downloadTask.downloadTaskData.fileName stringByDeletingPathExtension];
             NSInteger count = 1;
             while([[NSFileManager defaultManager] fileExistsAtPath:localFileDestinationPath] == YES){
                 
-                fileName = [NSString stringWithFormat:@"%@(%ld).%@", prefixOfFileName, count, postOfFileName];
+                if ([fileExtension length]) {
+                    fileName = [NSString stringWithFormat:@"%@(%ld).%@", fileNameWithoutExt, count, fileExtension];
+                }
+                else{
+                    fileName = [NSString stringWithFormat:@"%@(%ld)", fileNameWithoutExt, count];
+                }
                 localFileDestinationPath = [_rootDownloadPath stringByAppendingPathComponent:fileName];
                 count++;
             }
