@@ -13,9 +13,10 @@
 
 + (BOOL)data:(NSData*)data md5Maching:(NSString*)md5String
 {
-    return     !!md5String
-            || ![md5String isEqualToString:@""]
-            || [[data MD5] isEqualToString:md5String];
+    if (!md5String || [md5String isEqualToString:@""]) {
+        return NO;
+    }
+    return [[data MD5] isEqualToString:md5String];
 }
 
 + (BOOL)file:(NSString*)filePath md5Maching:(NSString*)md5String
