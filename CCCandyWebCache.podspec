@@ -22,8 +22,6 @@ Pod::Spec.new do |s|
 
   s.license      = "MIT"
 
-  s.author       = { "hzzhangjw" => "hzzhangjw@corp.netease.com" }
-
   s.source       = { :git => 'https://g.hz.netease.com/web-cache/CCCandyWebCache-ios.git' }
 
   s.platform     = :ios, "7.0"
