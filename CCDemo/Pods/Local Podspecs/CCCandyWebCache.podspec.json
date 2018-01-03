@@ -5,9 +5,6 @@
   "description": "iOS资源缓存解决方案.",
   "homepage": "https://g.hz.netease.com/web-cache/CCCandyWebCache-ios",
   "license": "MIT",
-  "authors": {
-    "hzzhangjw": "hzzhangjw@corp.netease.com"
-  },
   "source": {
     "git": "https://g.hz.netease.com/web-cache/CCCandyWebCache-ios.git"
   },
